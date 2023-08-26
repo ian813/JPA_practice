@@ -1,0 +1,35 @@
+#spring:
+#  datasource:
+#  url: jdbc:h2:tcp://localhost/~/jpashop
+#  username: sa
+#  password:
+#  driver-class-name: org.h2.Driver
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: create
+#    properties:
+#      hibernate:
+##        show_sql: true
+#        format_sql: true
+#
+#logging:
+#  level:
+#    org.hibernate.SQL: debug
+## org.hibernate.type: trace #??? ?? 2.x, hibernate5
+## org.hibernate.orm.jdbc.bind: trace #??? ?? 3.x, hibernate6
+
+server:
+  address: localhost
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/jpashop?useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 1234
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    generate-ddl: true
+    show-sql: true
